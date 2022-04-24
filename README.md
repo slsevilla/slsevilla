@@ -1,4 +1,3 @@
 - 👋 Hi, I’m @slsevilla
-- 👀 I’m interested in microbiome applications, generating flexible, reproducible, workflows for various seq platforms  
-- 🌱 I’m currently learning RNA Seq/ iCLIP Seq tools; python scripting
+- 👀 I’m interested in generating flexible, reproducible, workflows  
 - 📫 How to reach me samantha.sevilla@nih.gov
