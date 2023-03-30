@@ -19,6 +19,7 @@ jobs:
       - name: Base
         uses: lowlighter/metrics@latest
         with:
+          token: ${{ secrets.METRICS_TOKEN }}
           filename: github-metrics.svg
           base: header, activity, community, metadata
           base_indepth: yes
@@ -43,6 +44,7 @@ jobs:
         uses: lowlighter/metrics@latest
         with:
           filename: metrics.plugin.notable.svg
+          token: ${{ secrets.METRICS_TOKEN }}
           base: ""
           plugin_notable: yes # notable contributions
           plugin_notable_indepth: no
