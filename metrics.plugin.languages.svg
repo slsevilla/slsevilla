@@ -26,7 +26,7 @@
                     <rect mask="url(#languages-bar)" x="185.6713418830545" y="0" width="138.12691860453413" height="8" fill="#198CE7"/>
                     <rect mask="url(#languages-bar)" x="323.7982604875886" y="0" width="89.39746899087747" height="8" fill="#3572A5"/>
                     <rect mask="url(#languages-bar)" x="413.19572947846615" y="0" width="25.22934236750739" height="8" fill="#0298c3"/>
-                    <rect mask="url(#languages-bar)" x="438.4250718459735" y="0" width="17.897313433637" height="8" fill="#3ac486"/>
+                    <rect mask="url(#languages-bar)" x="438.4250718459735" y="0" width="17.897313433637" height="8" fill="#ededed"/>
                     <rect mask="url(#languages-bar)" x="456.32238527961056" y="0" width="1.8444145780507057" height="8" fill="#ededed"/>
                     <rect mask="url(#languages-bar)" x="458.1667998576612" y="0" width="1.8332001423387894" height="8" fill="#ededed"/>
                 </svg>
@@ -59,7 +59,7 @@
                         <div class="field language details">
                             <div class="field">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                                    <path fill="#3ac486" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
+                                    <path fill="#ededed" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
                                 </svg>
                                 Nextflow
                             </div>
@@ -131,30 +131,15 @@
             </section>
             <section class="column">
                 <h3 class="field">Recently used languages</h3>
-                <small>estimation from 40.4kb of code in 15 edited files across 9 commits over last 9 days</small>
+                <small>estimation from 1.65kb of code in 6 edited files across 5 commits over last 9 days</small>
                 <svg class="bar" xmlns="http://www.w3.org/2000/svg" width="460" height="8">
                     <mask id="languages-bar">
                         <rect x="0" y="0" width="460" height="8" fill="white" rx="5"/>
                     </mask>
                     <rect mask="url(#languages-bar)" x="0" y="0" width="0" height="8" fill="#d1d5da"/>
-                    <rect mask="url(#languages-bar)" x="0" y="0" width="254.19698503169445" height="8" fill="#3ac486"/>
-                    <rect mask="url(#languages-bar)" x="254.19698503169445" y="0" width="205.80301496830555" height="8" fill="#89e051"/>
+                    <rect mask="url(#languages-bar)" x="0" y="0" width="460" height="8" fill="#89e051"/>
                 </svg>
                 <div class="row fill-width">
-                    <section>
-                        <div class="field language details">
-                            <div class="field">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                                    <path fill="#3ac486" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
-                                </svg>
-                                Nextflow
-                            </div>
-                            <small>
-                                <div>20.7 kB</div>
-                                <div>55.26%</div>
-                            </small>
-                        </div>
-                    </section>
                     <section>
                         <div class="field language details">
                             <div class="field">
@@ -164,10 +149,12 @@
                                 Shell
                             </div>
                             <small>
-                                <div>16.8 kB</div>
-                                <div>44.74%</div>
+                                <div>1.51 kB</div>
+                                <div>100%</div>
                             </small>
                         </div>
+                    </section>
+                    <section>
                     </section>
                 </div>
             </section>
