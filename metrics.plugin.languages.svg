@@ -131,30 +131,16 @@
             </section>
             <section class="column">
                 <h3 class="field">Recently used languages</h3>
-                <small>estimation from 1.73kb of code in 7 edited files across 4 commits over last 12 days</small>
+                <small>estimation from 81kb of code in 23 edited files across 17 commits over last 2 days</small>
                 <svg class="bar" xmlns="http://www.w3.org/2000/svg" width="460" height="8">
                     <mask id="languages-bar">
                         <rect x="0" y="0" width="460" height="8" fill="white" rx="5"/>
                     </mask>
                     <rect mask="url(#languages-bar)" x="0" y="0" width="0" height="8" fill="#d1d5da"/>
-                    <rect mask="url(#languages-bar)" x="0" y="0" width="322.57012393998696" height="8" fill="#3ac486"/>
-                    <rect mask="url(#languages-bar)" x="322.57012393998696" y="0" width="137.42987606001304" height="8" fill="#89e051"/>
+                    <rect mask="url(#languages-bar)" x="0" y="0" width="295.20388349514565" height="8" fill="#89e051"/>
+                    <rect mask="url(#languages-bar)" x="295.20388349514565" y="0" width="164.79611650485438" height="8" fill="#3ac486"/>
                 </svg>
                 <div class="row fill-width">
-                    <section>
-                        <div class="field language details">
-                            <div class="field">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                                    <path fill="#3ac486" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
-                                </svg>
-                                Nextflow
-                            </div>
-                            <small>
-                                <div>1.07 kB</div>
-                                <div>70.12%</div>
-                            </small>
-                        </div>
-                    </section>
                     <section>
                         <div class="field language details">
                             <div class="field">
@@ -164,8 +150,22 @@
                                 Shell
                             </div>
                             <small>
-                                <div>458 bytes</div>
-                                <div>29.88%</div>
+                                <div>661 bytes</div>
+                                <div>64.17%</div>
+                            </small>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="field language details">
+                            <div class="field">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+                                    <path fill="#3ac486" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
+                                </svg>
+                                Nextflow
+                            </div>
+                            <small>
+                                <div>369 bytes</div>
+                                <div>35.83%</div>
                             </small>
                         </div>
                     </section>
