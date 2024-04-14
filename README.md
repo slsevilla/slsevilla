@@ -2,10 +2,10 @@
 
 #### About Me
 - 👋 Hi, I’m @slsevilla
-- I'm a bioinformatics analyst with the [Frederick National Laboratory for Cancer Research](https://frederick.cancer.gov), who supports the National Cancer Insitute within a bioinformatics core, the [CCBR](https://github.com/ccbr).
+- I'm a bioinformatics analyst and manager.
 - 📖 I’m interested in generating flexible, reproducible, workflows for next-generation sequencing data.
 - 📫 You can reach me at  [![Linkedin Badge](https://img.shields.io/badge/-SamanthaChill-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/samantha-chill-a1940524/)](https://www.linkedin.com/in/samantha-chill-a1940524/)
-[![Email Badge](https://img.shields.io/badge/-samantha.sevilla@nih.gov-c14438?style=flat-square&logo=ProtonMail&logoColor=white&link=mailto:samantha.sevilla@nih.gov)](mailto:samantha.sevilla@nih.gov)
+[![Email Badge](https://img.shields.io/badge/-slsevilla@gmail.com-c14438?style=flat-square&logo=ProtonMail&logoColor=white&link=mailto:slsevilla@gmail.com)](mailto:slsevilla@gmail.com)
 
 #### GitHub Metrics
 
