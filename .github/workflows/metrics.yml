@@ -1,51 +1,95 @@
-name: Metrics
+name: GitHub Metrics
+
 on:
-  schedule: [{cron: "0 0 * * 1"}] # Weekly updates
-  workflow_dispatch: # Manual trigger
-  push: {branches: ["master", "main"]} # Run on push to main or master
+  # Weekly updates (Monday 00:00 UTC)
+  schedule:
+    - cron: "0 0 * * 1"
+  # Manual trigger
+  workflow_dispatch:
+  # Optional: update on pushes to main / master
+  push:
+    branches:
+      - main
+      - master
+
+# Minimal required permissions for this workflow
+permissions:
+  contents: write
+
+# Avoid overlapping runs on slow weeks
+concurrency:
+  group: github-metrics-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  METRICS_TOKEN: ${{ secrets.METRICS_TOKEN }}
+  METRICS_USER: slsevilla
 
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
-    environment: 
-      name: production
-    permissions:
-      contents: read # Adjust based on your needs
+
     steps:
-      - name: Generate GitHub Metrics
-        uses: lowlighter/metrics@v<specific_version>
+      # -------- Base profile metrics (overview) --------
+      - name: Base metrics
+        uses: lowlighter/metrics@v3.34
         with:
-          token: ${{ secrets.METRICS_TOKEN }}
+          token: ${{ env.METRICS_TOKEN }}
+          user: ${{ env.METRICS_USER }}
           filename: github-metrics.svg
+
+          # Core sections
           base: header, activity, community, metadata
           base_indepth: yes
           repositories: 200
-          user: slsevilla
 
-      - name: Generate Language Metrics
-        uses: lowlighter/metrics@v<specific_version>
+          # Nice-to-have tweaks
+          template: classic
+          config_timezone: America/New_York
+          optimize: svg
+
+      # -------- Languages (bioinformatics-focused) --------
+      - name: Languages
+        uses: lowlighter/metrics@v3.34
         with:
+          token: ${{ env.METRICS_TOKEN }}
+          user: ${{ env.METRICS_USER }}
           filename: metrics.plugin.languages.svg
-          token: ${{ secrets.METRICS_TOKEN }}
+
           base: ""
-          user: slsevilla
+
+          # Languages plugin
           plugin_languages: yes
           plugin_languages_sections: most-used, recently-used
           plugin_languages_indepth: yes
-          plugin_languages_other: no
-          plugin_languages_ignored: html, css, scss, lua, Jupyter Notebook, TeX, JavaScript, PostScript, Apex, Eiffel
           plugin_languages_analysis_timeout: 60
           plugin_languages_details: bytes-size, percentage
-          plugin_languages_aliases: RenderScript:Rust, rebol:R
 
-      - name: Generate Notable Contributions
-        uses: lowlighter/metrics@v<specific_version>
+          # Focus on code-heavy/analysis languages.
+          # You had Jupyter Notebook, TeX, JavaScript, etc. ignored.
+          # Keeping a trimmed list that hides mostly "presentation" tech.
+          plugin_languages_ignored: html, css, scss, PostScript, Apex, Eiffel
+
+          # Optional extras you may like:
+          # plugin_languages_limit: 10        # top N languages
+          # plugin_languages_threshold: 2%    # ignore tiny languages
+          # plugin_languages_other: no        # keep or drop "Other"
+
+      # -------- Notable contributions (highlight best work) --------
+      - name: Notable contributions
+        uses: lowlighter/metrics@v3.34
         with:
+          token: ${{ env.METRICS_TOKEN }}
+          user: ${{ env.METRICS_USER }}
           filename: metrics.plugin.notable.svg
-          token: ${{ secrets.METRICS_TOKEN }}
+
           base: ""
+
           plugin_notable: yes
-          plugin_notable_indepth: no
-          plugin_notable_repositories: yes
-          plugin_notable_self: yes
+          plugin_notable_indepth: yes          # richer info for key work
+          plugin_notable_repositories: yes     # show standout repos
+          plugin_notable_self: yes             # include your own repos
           plugin_notable_types: commit, pull_request, issue
+          # Optional filters for “best work” only:
+          # plugin_notable_from: organization   # eg, focus on orgs
+          # plugin_notable_repositories_ignored: user/test-repo
