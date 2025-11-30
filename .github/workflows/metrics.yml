@@ -1,22 +1,24 @@
 name: GitHub Metrics
 
 on:
-  # Weekly updates (Monday 00:00 UTC)
+  # Weekly updates (Monday at 00:00 UTC)
   schedule:
     - cron: "0 0 * * 1"
-  # Manual trigger
+
+  # Manual dispatch
   workflow_dispatch:
-  # Optional: update on pushes to main / master
+
+  # Optional: updates when pushing to main/master
   push:
     branches:
       - main
       - master
 
-# Minimal required permissions for this workflow
+# GitHub recommended best practice: set permissions at top-level
 permissions:
   contents: write
 
-# Avoid overlapping runs on slow weeks
+# Prevent overlapping runs
 concurrency:
   group: github-metrics-${{ github.ref }}
   cancel-in-progress: true
@@ -30,25 +32,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # -------- Base profile metrics (overview) --------
-      - name: Base metrics
+      # ---------------------------------------------------------
+      #  BASE PROFILE METRICS
+      # ---------------------------------------------------------
+      - name: Base Metrics
         uses: lowlighter/metrics@v3.34
         with:
           token: ${{ env.METRICS_TOKEN }}
           user: ${{ env.METRICS_USER }}
           filename: github-metrics.svg
 
-          # Core sections
           base: header, activity, community, metadata
-          base_indepth: yes
+          base_indepth: true
           repositories: 200
 
-          # Nice-to-have tweaks
           template: classic
           config_timezone: America/New_York
           optimize: svg
 
-      # -------- Languages (bioinformatics-focused) --------
+      # ---------------------------------------------------------
+      #  LANGUAGES (BIOINFORMATICS-OPTIMIZED)
+      # ---------------------------------------------------------
       - name: Languages
         uses: lowlighter/metrics@v3.34
         with:
@@ -58,25 +62,26 @@ jobs:
 
           base: ""
 
-          # Languages plugin
           plugin_languages: yes
-          plugin_languages_sections: most-used, recently-used
+          # FIX: remove "recently-used" to avoid internal plugin error
+          plugin_languages_sections: most-used
+
           plugin_languages_indepth: yes
           plugin_languages_analysis_timeout: 60
           plugin_languages_details: bytes-size, percentage
 
-          # Focus on code-heavy/analysis languages.
-          # You had Jupyter Notebook, TeX, JavaScript, etc. ignored.
-          # Keeping a trimmed list that hides mostly "presentation" tech.
+          # Bioinformatics-focused ignore list (no markup/presentation)
           plugin_languages_ignored: html, css, scss, PostScript, Apex, Eiffel
 
-          # Optional extras you may like:
-          # plugin_languages_limit: 10        # top N languages
-          # plugin_languages_threshold: 2%    # ignore tiny languages
-          # plugin_languages_other: no        # keep or drop "Other"
+          # Optional tuning:
+          # plugin_languages_limit: 10
+          # plugin_languages_threshold: 2
+          # plugin_languages_other: no
 
-      # -------- Notable contributions (highlight best work) --------
-      - name: Notable contributions
+      # ---------------------------------------------------------
+      #  NOTABLE CONTRIBUTIONS
+      # ---------------------------------------------------------
+      - name: Notable Contributions
         uses: lowlighter/metrics@v3.34
         with:
           token: ${{ env.METRICS_TOKEN }}
@@ -86,10 +91,11 @@ jobs:
           base: ""
 
           plugin_notable: yes
-          plugin_notable_indepth: yes          # richer info for key work
-          plugin_notable_repositories: yes     # show standout repos
-          plugin_notable_self: yes             # include your own repos
+          plugin_notable_indepth: yes
+          plugin_notable_repositories: yes
+          plugin_notable_self: yes
           plugin_notable_types: commit, pull_request, issue
-          # Optional filters for “best work” only:
-          # plugin_notable_from: organization   # eg, focus on orgs
-          # plugin_notable_repositories_ignored: user/test-repo
+
+          # Optional filters:
+          # plugin_notable_from: organization
+          # plugin_notable_repositories_ignored: slsevilla/test
