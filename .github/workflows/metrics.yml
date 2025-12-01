@@ -51,7 +51,7 @@ jobs:
           optimize: svg
 
       # ---------------------------------------------------------
-      #  LANGUAGES (BIOINFORMATICS-OPTIMIZED)
+      #  LANGUAGES (FAST, BIOINFORMATICS-OPTIMIZED)
       # ---------------------------------------------------------
       - name: Languages
         uses: lowlighter/metrics@v3.34
@@ -62,21 +62,24 @@ jobs:
 
           base: ""
 
-          plugin_languages: yes
-          # FIX: remove "recently-used" to avoid internal plugin error
+          plugin_languages: true
+          # Only use "most-used" to avoid the buggy recent analyzer
           plugin_languages_sections: most-used
 
-          plugin_languages_indepth: yes
+          # 🚫 Turn OFF indepth mode so it doesn't crawl every repo
+          plugin_languages_indepth: false
+
+          # Still keep a reasonable analysis timeout in case it kicks in
           plugin_languages_analysis_timeout: 60
           plugin_languages_details: bytes-size, percentage
 
-          # Bioinformatics-focused ignore list (no markup/presentation)
+          # Bioinformatics-focused: hide mostly presentation tech
           plugin_languages_ignored: html, css, scss, PostScript, Apex, Eiffel
 
-          # Optional tuning:
+          # Optional tuning (uncomment if desired)
           # plugin_languages_limit: 10
           # plugin_languages_threshold: 2
-          # plugin_languages_other: no
+          # plugin_languages_other: false
 
       # ---------------------------------------------------------
       #  NOTABLE CONTRIBUTIONS
@@ -90,10 +93,10 @@ jobs:
 
           base: ""
 
-          plugin_notable: yes
-          plugin_notable_indepth: yes
-          plugin_notable_repositories: yes
-          plugin_notable_self: yes
+          plugin_notable: true
+          plugin_notable_indepth: true
+          plugin_notable_repositories: true
+          plugin_notable_self: true
           plugin_notable_types: commit, pull_request, issue
 
           # Optional filters:
