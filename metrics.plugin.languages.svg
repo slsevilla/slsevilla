@@ -21,14 +21,14 @@
                         <rect x="0" y="0" width="460" height="8" fill="white" rx="5"/>
                     </mask>
                     <rect mask="url(#languages-bar)" x="0" y="0" width="0" height="8" fill="#d1d5da"/>
-                    <rect mask="url(#languages-bar)" x="0" y="0" width="416.57575116589976" height="8" fill="#DA5B0B"/>
-                    <rect mask="url(#languages-bar)" x="416.57575116589976" y="0" width="21.799747221678043" height="8" fill="#198CE7"/>
-                    <rect mask="url(#languages-bar)" x="438.3754983875778" y="0" width="7.488816814779545" height="8" fill="#3ac486"/>
-                    <rect mask="url(#languages-bar)" x="445.8643152023573" y="0" width="7.265763616722518" height="8" fill="#0298c3"/>
-                    <rect mask="url(#languages-bar)" x="453.13007881907987" y="0" width="3.1872336905140863" height="8" fill="#4298b8"/>
-                    <rect mask="url(#languages-bar)" x="456.31731250959393" y="0" width="2.758358557234811" height="8" fill="#3572A5"/>
-                    <rect mask="url(#languages-bar)" x="459.0756710668287" y="0" width="0.7109545721107627" height="8" fill="#89e051"/>
-                    <rect mask="url(#languages-bar)" x="459.7866256389395" y="0" width="0.21337436106047025" height="8" fill="#f1e05a"/>
+                    <rect mask="url(#languages-bar)" x="0" y="0" width="411.5599009344736" height="8" fill="#DA5B0B"/>
+                    <rect mask="url(#languages-bar)" x="411.5599009344736" y="0" width="21.537263707357166" height="8" fill="#198CE7"/>
+                    <rect mask="url(#languages-bar)" x="433.0971646418308" y="0" width="8.263853264090669" height="8" fill="#3572A5"/>
+                    <rect mask="url(#languages-bar)" x="441.3610179059214" y="0" width="7.39864645933185" height="8" fill="#3ac486"/>
+                    <rect mask="url(#languages-bar)" x="448.7596643652533" y="0" width="7.178278970733339" height="8" fill="#0298c3"/>
+                    <rect mask="url(#languages-bar)" x="455.93794333598663" y="0" width="3.148857268460159" height="8" fill="#4298b8"/>
+                    <rect mask="url(#languages-bar)" x="459.08680060444675" y="0" width="0.702394204290325" height="8" fill="#89e051"/>
+                    <rect mask="url(#languages-bar)" x="459.7891948087371" y="0" width="0.210805191262876" height="8" fill="#f1e05a"/>
                 </svg>
                 <div class="row fill-width">
                     <section>
@@ -41,31 +41,31 @@
                             </div>
                             <small>
                                 <div>11.3 MB</div>
-                                <div>90.56%</div>
+                                <div>89.47%</div>
                             </small>
                         </div>
                         <div class="field language details">
                             <div class="field">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                                    <path fill="#3ac486" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
+                                    <path fill="#3572A5" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
                                 </svg>
-                                Nextflow
+                                Python
                             </div>
                             <small>
-                                <div>204 kB</div>
-                                <div>1.63%</div>
+                                <div>228 kB</div>
+                                <div>1.8%</div>
                             </small>
                         </div>
                         <div class="field language details">
                             <div class="field">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                                    <path fill="#4298b8" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
+                                    <path fill="#0298c3" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
                                 </svg>
-                                Groovy
+                                Perl
                             </div>
                             <small>
-                                <div>86.9 kB</div>
-                                <div>0.69%</div>
+                                <div>198 kB</div>
+                                <div>1.56%</div>
                             </small>
                         </div>
                         <div class="field language details">
@@ -91,31 +91,31 @@
                             </div>
                             <small>
                                 <div>594 kB</div>
-                                <div>4.74%</div>
+                                <div>4.68%</div>
                             </small>
                         </div>
                         <div class="field language details">
                             <div class="field">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                                    <path fill="#0298c3" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
+                                    <path fill="#3ac486" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
                                 </svg>
-                                Perl
+                                Nextflow
                             </div>
                             <small>
-                                <div>198 kB</div>
-                                <div>1.58%</div>
+                                <div>204 kB</div>
+                                <div>1.61%</div>
                             </small>
                         </div>
                         <div class="field language details">
                             <div class="field">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                                    <path fill="#3572A5" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
+                                    <path fill="#4298b8" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
                                 </svg>
-                                Python
+                                Groovy
                             </div>
                             <small>
-                                <div>75.2 kB</div>
-                                <div>0.6%</div>
+                                <div>86.9 kB</div>
+                                <div>0.68%</div>
                             </small>
                         </div>
                         <div class="field language details">
